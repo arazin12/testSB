@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Helo page</h1>
+	<pre th:text="${msg}">please wait...</pre>
+	<form method="post" action="/fom2" th:object="${formModel}">
+		<div>
+		<!-- <input type="checkbox" name="select1" value="チェック"/> -->
+		<!-- <label for="check1">チェック</label> -->
+		</div>
+		<div>
+				<input name="name" th:value="*{name}" />
+				input type="checkbox" name="checks" id="1" value="1">
+<input type="hidden" name="_checks" value="on">
+<label for="1" class="checkbox"></label>
+
+<input type="checkbox" name="checks" id="2" value="2">
+<input type="hidden" name="_checks" value="on">
+<label for="2" class="checkbox"></label>
+
+<input type="checkbox" name="checks" id="3" value="3">
+<input type="hidden" name="_checks" value="on">
+<label for="3" class="checkbox"></label>
+		<!-- <input type="radio" name="sei" value="1"  />
+		<label>男性</label>
+		</div>
+		<div>
+		<input type="radio" name="sei"  value="2" />
+		<label>女性</label> -->
+<!-- <ul>
+  <li th:each="feat : ${allFeatures}">
+    <input type="checkbox" th:field="*{features}" th:value="${feat}" />
+    <label th:for="${#ids.prev('features')}"
+           th:text="${feat}">feature label</label>
+  </li>
+</ul> -->
+		</div>
+<!-- 		<div>
+		<select id="select1" name="select1" size="4" th:value=${"select1"}>
+			<option value="1">Windows</option>
+			<option value="2">Mac</option>
+			<option value="3">Linux</option>
+		</select>
+		<select id="select2" name="select2" size="4" multiple="multiple">
+			<option value="Android">Android</option>
+			<option value="iphone">iPhone</option>
+			<option value="Winfone">Windows Phone</option>
+		</select>
+		</div> -->
+		<input type="submit" value="Click" />
+	</form>
+</body>
+
+
+
+</html>

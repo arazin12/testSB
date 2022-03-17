@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>好きな動物はどれ？</title>
+</head>
+<body>
+  <h1>好きな動物を選択してください</h1>
+  <form method="post"  action="/saveCheckBox">
+    <label th:each="item:${animalCheckBox}" th:object="${animal}">
+      <input type="checkbox" name="selectedAnimal"
+       th:value="${item.key}" th:text="${item.value}"
+       th:field="*{selectAnimals}"/>
+    </label>
+    <div>
+      <input type="submit" value="送信">
+    </div>
+  </form>
+</body>
+</html>

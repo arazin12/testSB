@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>Insert title here</title>
+</head>
+<body>
+<form method="post" action="/test" th:object="${form}">
+    <!--最初のページを表示するテーブル-->
+<table>
+  <tr th:each="item : ${SelectList}">
+    <td>
+      <input type="checkbox" name="checks"
+      th:id="${item}" th:value="${item}" />
+                <label th:for="${item}" class="checkbox" th:text="${item}"></label>
+            </td>
+            <td>
+                <!--ほかにも表示している値はありますが、省略します。-->
+            </td>
+        </tr>
+    </table>
+    <!--送信ボタンを押下したらcontroller側にチェックを入れたボックスのvalue等を出力したいです。-->
+    <button value="submit" type="submit" name="submit">送信</button>
+</form>
+</body>
+</html>

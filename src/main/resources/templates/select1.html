@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Helo page</h1>
+	<form method="POST" action="select1">
+		<select id="singleSelect" name="selectedItem">
+			<option th:each="item : ${selectItems}" th:value="${item.key}"
+				th:text="${item.value}" "${item.key == param.selectedItem[0]}">singleSelect</option>
+			<select id="singleSelect" name="selectedItem">
+		</select>
+		<input type="submit" />
+		</select>
+		</form>
+
+<!--
+	<form>
+		<select>
+			<option th:each="item : ${selectItems}" th:value="${item.key}"
+				th:text="${item.value}"
+				>singleSelect</option>
+		</select> <input type="submit" />
+	</form>-->
+</body>
+<!-- th:selected="${item.key == param.selectedItem[0]}" -->
+
+
+</html>

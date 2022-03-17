@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Helo page</h1>
+	<pre th:text="${msg}">please wait...</pre>
+	<form method="post" action="/cart" th:object="${formModel}">
+		<input name="id" th:value="*{id}">
+		<input name="name"th:value="*{name}">
+		 <input name="num" th:value="*{num}">
+		 <input	type="submit" />
+	</form>
+	<table th:each="obj:${data2}">
+
+	<tr>
+	<td th:text="*{obj.id}"></td>
+	<td th:text="*{obj.name}"></td>
+	<td th:text="*{obj.num}"></td>
+	<td th:text="*{obj.sum}"></td>
+	</tr>
+
+	</table>
+</body>
+</html>

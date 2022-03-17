@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Helo page</h1>
+	<pre th:text="${msg}">please wait...</pre>
+	<form method="post" action="/fom1" th:object="${formModel}">
+		<div>
+		<!-- <input type="checkbox" id="check1" name="check1" th:value="チェック"/>
+		<label for="check1">チェック</label> -->
+		</div>
+		<table>
+  <tr th:each="item : ${SelectList}">
+    <td>
+      <input type="checkbox" name="checks" th:id="${item.id}" th:value="${item.id}"
+ th:checked="${form.checks.contains(item.id)}" />
+                <label th:for="${item.id}" class="checkbox"></label>
+            </td>
+            <td>
+                <!--ほかにも表示している値はありますが、省略します。-->
+            </td>
+        </tr>
+    </table>
+<!-- 		<div>
+		<input name="name" th:value="*{name}" />
+
+		<input type="radio" name="sei"  value="1" />
+		<label>男性</label>
+		</div>
+		<div>
+		<input type="radio" name="sei"  value="2" />
+		<label>女性</label>
+		</div> -->
+<!-- 		<div>
+		<select id="select1" name="select1" size="4" th:value="a">
+			<option value="Windows">Windows</option>
+			<option value="Mac">Mac</option>
+			<option value="Linux">Linux</option>
+		</select>
+		<select id="select2" name="select2" size="4" multiple="multiple">
+			<option value="Android">Android</option>
+			<option value="iphone">iPhone</option>
+			<option value="Winfone">Windows Phone</option>
+		</select>
+		</div> -->
+		<input type="submit" value="Click" />
+	</form>
+</body>
+
+
+
+</html>

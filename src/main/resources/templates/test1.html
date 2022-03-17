@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Helo page</h1>
+	<form method="post" action="test">
+	<input type="submit"/>
+	</form>
+	<hr/>
+	<table th:each="obj:${obj1}">
+	<tr>
+	<td th:text="${obj.id}"></td><td th:text="${obj.name}"></td>
+	</tr>
+	</table>
+</body>
+
+
+
+</html>
