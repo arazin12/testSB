@@ -13,6 +13,7 @@ public class Test {
 		checks.add("2");
 		checks.add("3");
 		checks.add("4");
+		checks.add("5");
 		for(Object check:checks) {
 			System.out.println(check);
 		}
