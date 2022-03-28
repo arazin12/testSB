@@ -1,6 +1,7 @@
 package com.example.demo;
 public class Animal {
   private String[] selectAnimals;
+  private int a;
 
   public Animal() {
 
